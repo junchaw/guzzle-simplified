@@ -59,6 +59,6 @@ class SimpleClient
      */
     public static function postApi(string $url, array $form_params = [])
     {
-        return \GuzzleHttp\json_decode(static::instance()->get($url, compact('form_params'))->getBody()->getContents(), true);
+        return \GuzzleHttp\json_decode(static::instance()->post($url, compact('form_params'))->getBody()->getContents(), true);
     }
 }
