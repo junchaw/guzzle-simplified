@@ -46,7 +46,7 @@ class SimpleClient
      * @return mixed
      * @throws \InvalidArgumentException if the JSON cannot be decoded.
      */
-    public static function getApi(string $url, array $params = []): mixed
+    public static function getApi(string $url, array $params = [])
     {
         return \GuzzleHttp\json_decode(static::instance()->get($url, compact('params'))->getBody()->getContents());
     }
@@ -57,7 +57,7 @@ class SimpleClient
      * @return mixed
      * @throws \InvalidArgumentException if the JSON cannot be decoded
      */
-    public static function postApi(string $url, array $form_params = []): mixed
+    public static function postApi(string $url, array $form_params = [])
     {
         return \GuzzleHttp\json_decode(static::instance()->get($url, compact('form_params'))->getBody()->getContents());
     }
