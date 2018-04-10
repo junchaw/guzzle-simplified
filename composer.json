@@ -2,6 +2,7 @@
     "name": "wbswjc/guzzle-simplified",
     "description": "Simplified Guzzle",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "wbswjc",
