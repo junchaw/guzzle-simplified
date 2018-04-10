@@ -42,13 +42,13 @@ class SimpleClient
 
     /**
      * @param string $url
-     * @param array $params
+     * @param array $query
      * @return mixed
      * @throws \InvalidArgumentException if the JSON cannot be decoded.
      */
-    public static function getApi(string $url, array $params = [])
+    public static function getApi(string $url, array $query = [])
     {
-        return \GuzzleHttp\json_decode(static::instance()->get($url, compact('params'))->getBody()->getContents());
+        return \GuzzleHttp\json_decode(static::instance()->get($url, compact('query'))->getBody()->getContents());
     }
 
     /**
