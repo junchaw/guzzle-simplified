@@ -1,7 +1,7 @@
 {
-    "name": "wbswjc",
-    "description": "",
-    "type": "project",
+    "name": "wbswjc/guzzle-simplified",
+    "description": "Simplified Guzzle",
+    "type": "library",
     "authors": [
         {
             "name": "wbswjc",
@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "php": ">=7"
+        "php": ">7",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
         "psr-4": {
