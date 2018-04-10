@@ -1,13 +1,13 @@
 <?php
 
-namespace A;
+namespace Wbswjc;
 
-use GuzzleHttp\Client as BaseClient;
+use GuzzleHttp\Client;
 
-class Client
+class SimpleClient
 {
     /**
-     * @var BaseClient
+     * @var Client
      */
     protected static $instance;
 
@@ -17,15 +17,15 @@ class Client
             return static::$instance;
         }
 
-        return static::$instance = new BaseClient();
+        return static::$instance = new Client();
     }
 
-    public static function get(string $url, array $params)
+    public static function get(string $url, array $params): string
     {
         return static::instance()->get($url, compact('params'))->getBody()->getContents();
     }
 
-    public static function post(string $url, array $form_params)
+    public static function post(string $url, array $form_params): string
     {
         return static::instance()->post($url, compact('form_params'))->getBody()->getContents();
     }
