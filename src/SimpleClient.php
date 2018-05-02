@@ -22,12 +22,12 @@ class SimpleClient
 
     /**
      * @param string $url
-     * @param array $params
+     * @param array $query
      * @return string
      */
-    public static function get(string $url, array $params = []): string
+    public static function get(string $url, array $query = []): string
     {
-        return static::instance()->get($url, compact('params'))->getBody()->getContents();
+        return static::instance()->get($url, compact('query'))->getBody()->getContents();
     }
 
     /**
